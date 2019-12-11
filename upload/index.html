@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" tpe="text/css" href="css/style.css">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+
+    <title>Image Uploader</title>
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/a0de352767.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class="hero is-fullheight">
+    <div class="hero-head"> 
+        <h1 id="main-title">Upload your photos</h1>
+        <!-- Button to upload images start-->
+        <div class="wrapper">
+            <label for="files">
+                <input type="file" multiple="true" accept="image/*" id="files" style="display:none">
+                <i class="fas fa-download fa-2x"></i>
+                <input type="button" id="filebtn" onclick="document.getElementById('files').click()">     
+            </label>  
+        </div><!-- Button to upload images ends-->
+
+        <p></p>
+        
+        <br><br>
+        <p id="up">You can delete uploaded photos if you wish.</p>
+        <br>
+        <!-- Delete button -->
+        <button onclick="deletephoto()">Delete photos</button> 
+    
+        <br><br>
+        <p id="">Processing time is: ... very fast :) </p>
+    </div>
+
+    <div class="hero-body">
+        <!-- Gallery of uploaded images -->
+        <output id="result" width="200"/>	    
+    </div>
+</div>  
+
+<!-- Javascript -->
+<script src="js/jscode.js"></script>
+
+</body>
+</html>
